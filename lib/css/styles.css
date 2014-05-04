@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
 @import "ionicons.css";
 * {
   margin: 0;
@@ -121,7 +122,7 @@ footer .colophon {
   display: inline-block;
 }
 body {
-  font: 1em "Helvetica Neue", helvetica, arial, sans-serif;
+  font: 1em 'Crimson Text', serif;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -177,6 +178,17 @@ header.main h1 {
 }
 footer {
   background: #cccccc;
+}
+@media only screen and (min-width: 40em) {
+  .post {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+  }
+  .post p {
+    margin-bottom: 0;
+    text-indent: 2em;
+  }
 }
 @media only screen and (min-width: 40em) {
   header.main {
