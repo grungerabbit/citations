@@ -30,10 +30,30 @@
 			};
 		},
 		'Citations' : function ($element) {
+			var text = $element.text();
+			
 			
 			function highlightCitations() {
 				// EXAMPLE - should really wrap + addClass on the real citations
 				$element.find("em").css("background-color", "red");
+			}
+			
+			function dateOnlyCitation() {
+				//var re = /\((.*?)\,(.*?)\)/g;
+				
+				//var re = /\((.*?)\,(.*?)\)/g;
+				
+				var number = /\(+\d{4}\)/g;
+				console.log(text.replace(number, "TESTTTTTTT"));
+			}
+			
+			function simpleCitation() {
+				//var re = /\((.*?)\,(.*?)\)/g;
+				
+				//var re = /\((.*?)\,(.*?)\)/g;
+				
+				var re = /\(\w*\,\s\d{4}\)/g;
+				console.log(text.replace(re, "AAAAAA"));
 			}
 			
 			/*
@@ -52,6 +72,8 @@
 			return {
 				setup: function () {
 					highlightCitations();
+					dateOnlyCitation();
+					simpleCitation();
 				}
 			}
 		}
